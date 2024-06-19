@@ -16,8 +16,10 @@ body {
   justify-content: center;
   background-color: #F5F5F5;
   border-radius: 0.75rem;
-  height: 70vh;
+  min-height: 100vh;
   width: 100%;
+  overflow: auto;
+  padding: 5%;
 }
 
 .die {
@@ -65,4 +67,22 @@ h2 {
 .roll:active {
   transform: scale(0.98);
   box-shadow: 0.3rem 0.2rem 2rem 0.1rem rgba(0,0,0,0.24) 
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0
+}
+
+.instruction--heading {
+  font-weight: 700;
+}
+
+.instruction--body {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  padding: 1rem;
+  text-align: center;
+  width: 85%;
+  
 }

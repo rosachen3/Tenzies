@@ -55,6 +55,8 @@ export default function App() {
 
 	return (
     <main className="game-container">
+		<h1>Tenzies</h1>
+		<p className="instruction--body"><span className="instruction--heading">Instructions: </span>Click on a die to save it. To win the game, roll the dice until you have saved the same number onto each die.</p>
 		<div className="dice-container">
 			{diceElements}
 		</div>
