@@ -1,12 +1,22 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './index.css'
 import Die from "./components/Die"
 import { nanoid } from "nanoid"
+import Confetti from "react-confetti"
 
 export default function App() {
-	const [diceData, setDiceData] = useState(generateRandomDice(1,6,10))
 	const numDice = 10
+	const [diceData, setDiceData] = useState(generateRandomDice(1,6,10))
+	const [winCondition, setWinCondition] = React.useState(false)
+	
+	React.useEffect(() => {
+		const allHeldAndSame = diceData.every(die => die.isHeld && die.value === diceData[0].value)
+		if (allHeldAndSame) {
+			setWinCondition(true)
+		} 
+	}, [diceData])
+	
 	const diceElements = diceData.map(die => {
 		return <Die 
 			key={die.id}
@@ -53,14 +63,16 @@ export default function App() {
 		}))
 	}
 
+
 	return (
     <main className="game-container">
+		{winCondition && <Confetti/>}
 		<h1>Tenzies</h1>
 		<p className="instruction--body"><span className="instruction--heading">Instructions: </span>Click on a die to save it. To win the game, roll the dice until you have saved the same number onto each die.</p>
 		<div className="dice-container">
 			{diceElements}
 		</div>
-		<button className="roll" onClick={handleReroll}>Roll</button>
+		<button className="roll" onClick={handleReroll}>{winCondition ? "New Game" : "Roll"}</button>
     </main>
   )
 }
