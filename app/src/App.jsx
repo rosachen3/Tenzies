@@ -50,10 +50,15 @@ export default function App() {
 	}
 
 	function handleReroll() {
-		setDiceData(oldDice => oldDice.map(die => {
-			return die.isHeld ? 
-				die : generateNewDie()
-		}))
+		if (!winCondition) {
+			setDiceData(oldDice => oldDice.map(die => {
+				return die.isHeld ? 
+					die : generateNewDie()
+			}))
+		} else {
+			setWinCondition(false)
+			setDiceData(generateRandomDice(1,6,10))
+		}
 	}
 
 	function holdDice(id) {
@@ -62,7 +67,6 @@ export default function App() {
 				{...die, isHeld: !die.isHeld} : die
 		}))
 	}
-
 
 	return (
     <main className="game-container">

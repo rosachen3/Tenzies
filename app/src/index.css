@@ -35,6 +35,11 @@ body {
 
 }
 
+.die:active {
+  transform: scale(0.98);
+  box-shadow: 0.3rem 0.2rem 2rem 0.1rem rgba(0,0,0,0.24) 
+}
+
 .dice-container{
   display: grid;
   justify-items: center;
