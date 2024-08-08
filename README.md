@@ -5,7 +5,7 @@ https://rosachen3-tenzies.netlify.app/
 ### 🎲 How to Play The Game 
 Click on any die to save it. To win the game, have all dice be selected with the same number! Click "Roll" to refresh the dice.
 
-
+![Tenzies Screen](./app/src/assets/tenzies-sreen.png)
 
 ### 🛠️ Built With
 This game was built using:
