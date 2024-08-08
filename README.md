@@ -3,15 +3,15 @@
 https://rosachen3-tenzies.netlify.app/
 
 ### 🎲 How to Play The Game 
-Click on any die to save it. To win the game, have all dice be selected with the same number! Click "Roll" to refresh the dice.
+Select any die to save it. To win, ensure all dice display the same number. Click 'Roll' to refresh the dice.
 
 ![Tenzies Screen](./app/src/assets/tenzies-sreen.png)
 
-### 🛠️ Built With
+### 🛠️ Build
 This game was built using:
 * HTML
 * CSS
 * JavaScript
 * ReactJS
 
-This project was created in order to learn ReactJS fundamentals alongside conditional rendering and the uses of hooks to manage state and side effects.
+This project was created to learn the fundamentals of ReactJS, including conditional rendering and the use of hooks for managing state and side effects.
