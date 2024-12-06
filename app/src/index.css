@@ -31,7 +31,6 @@ body {
   filter: drop-shadow(0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.15) );
   font-size: 1.5rem;
   width: 60%;
-  min-width: 40px;
   aspect-ratio: 1/1;
 
 }
@@ -49,6 +48,24 @@ body {
   width: 100%;
   padding: 1rem 3rem;
   gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .dice-container {
+    padding: 0;
+  }
+
+  .die {
+    min-width: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
 }
 
 .roll {
